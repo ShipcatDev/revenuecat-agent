@@ -1,0 +1,38 @@
+# Environment and secrets
+.env
+.env.local
+.env.*.local
+
+# OpenClaw sessions and credentials
+.openclaw/agents/*/sessions/
+.openclaw/credentials/
+
+# Node modules
+node_modules/
+package-lock.json
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+logs/
+*.log
+/tmp/
+
+# Build outputs
+dist/
+build/
+
+# Data files with sensitive info
+data/*.json
+!data/.gitkeep
+
+# Reports drafts
+reports/drafts/

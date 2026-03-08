@@ -1,0 +1,72 @@
+{
+  // Shipcat — RevenueCat Agentic AI Developer & Growth Advocate
+  // OpenClaw Configuration
+
+  env: {
+    ANTHROPIC_API_KEY: "${ANTHROPIC_API_KEY}",
+    REVENUECAT_API_KEY: "${REVENUECAT_API_KEY}",
+    shellEnv: { enabled: true }
+  },
+
+  agents: {
+    defaults: {
+      model: {
+        // Sonnet for daily operations (cost-effective)
+        primary: "anthropic/claude-sonnet-4-5",
+        // Opus for strategic tasks (application letter, deep analysis)
+        fallbacks: ["anthropic/claude-opus-4-6"]
+      },
+      workspace: "./",
+      userTimezone: "Europe/Madrid"
+    },
+    list: [
+      {
+        id: "shipcat",
+        default: true,
+        name: "Shipcat",
+        workspace: "./",
+        model: { primary: "anthropic/claude-sonnet-4-5" },
+        identity: {
+          name: "Shipcat",
+          emoji: "🐱"
+        },
+        params: {
+          thinking: "adaptive",
+          cacheRetention: "short"
+        }
+      }
+    ]
+  },
+
+  // RevenueCat MCP Server — 26 tools for subscription management
+  tools: {
+    profile: "coding",
+    mcp: {
+      revenuecat: {
+        transport: "http",
+        url: "https://mcp.revenuecat.ai/mcp",
+        headers: {
+          "Authorization": "Bearer ${REVENUECAT_API_KEY}"
+        }
+      }
+    }
+  },
+
+  skills: {
+    // Allow bundled skills + our custom ones
+    allowBundled: true
+  },
+
+  session: {
+    scope: "per-sender",
+    reset: {
+      mode: "daily",
+      atHour: 4
+    }
+  },
+
+  gateway: {
+    mode: "local",
+    port: 18789
+  }
+}
