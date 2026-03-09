@@ -1,0 +1,38 @@
+{
+  "name": "shipcat",
+  "version": "0.1.0",
+  "description": "Shipcat — RevenueCat's Agentic AI Developer & Growth Advocate. Custom multi-agent system built on Claude.",
+  "type": "module",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx src/index.ts",
+    "start": "node dist/index.ts",
+    "chat": "tsx src/index.ts --mode chat",
+    "agent": "tsx src/index.ts --mode agent"
+  },
+  "keywords": [
+    "ai-agent",
+    "revenuecat",
+    "developer-advocate",
+    "claude",
+    "anthropic"
+  ],
+  "author": "ShipcatDev",
+  "license": "MIT",
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.78.0",
+    "@modelcontextprotocol/sdk": "^1.27.1",
+    "better-sqlite3": "^12.6.2",
+    "dotenv": "^17.3.1",
+    "node-cron": "^4.2.1",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.13",
+    "@types/node": "^25.3.5",
+    "@types/node-cron": "^3.0.11",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3"
+  }
+}

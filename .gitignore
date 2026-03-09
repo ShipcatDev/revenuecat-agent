@@ -32,6 +32,7 @@ build/
 
 # Data files with sensitive info
 data/*.json
+data/*.db
 !data/.gitkeep
 
 # Reports drafts
