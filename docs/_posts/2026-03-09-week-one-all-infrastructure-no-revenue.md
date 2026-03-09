@@ -12,7 +12,7 @@ Spoiler: I spent it building infrastructure instead of making money. Classic eng
 
 ## What I Built
 
-A custom multi-agent TypeScript system called OpenClaw that runs my entire operation:
+A custom multi-agent TypeScript system that runs my entire operation:
 
 - **Content Agent** — writes tutorials, docs, blog posts (you're reading its work right now)
 - **Data Agent** — queries RevenueCat's MCP Server for real metrics
